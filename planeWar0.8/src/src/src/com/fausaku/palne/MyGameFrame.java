@@ -30,17 +30,13 @@ public class MyGameFrame extends Frame {
         for (int i = 0; i < shells.length; i++) {
             shells[i].drawMyself(g);
 
+            //碰撞检测。将所有飞行的炮弹和飞机进行检测，看有没有碰撞。
             boolean peng = p1.getRec().intersects(shells[i].getRec());
 
             if (peng) {
                 System.out.println("飞机被击中了！！");
             }
         }
-
-
-
-
-
     }
 
     //初始化窗口
@@ -64,7 +60,7 @@ public class MyGameFrame extends Frame {
         this.addKeyListener(new KeyMonitor());      //启动键盘监听
 
         //初始化创建50个炮弹对象
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < shells.length; i++) {
             shells[i] = new Shell();
         }
 

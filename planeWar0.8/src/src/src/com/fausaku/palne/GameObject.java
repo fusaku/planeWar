@@ -37,7 +37,7 @@ public class GameObject {
 
     public GameObject(){}
     //所有物体都是矩形，当你获得对应的矩形的时候，我们将可以做一些相关的判断操作！
-    public Readable getRec() {
-        return (Readable) new Rectangle((int)x,(int)y,width,height);
+    public Rectangle getRec() {
+        return new Rectangle((int)x,(int)y,width,height);
     }
 }
